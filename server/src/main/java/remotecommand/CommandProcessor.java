@@ -1,6 +1,8 @@
 package remotecommand;
 
-public interface CommandProcessor {
+import java.rmi.*;
+
+public interface CommandProcessor extends Remote {
 
 	void submit(Command c);
 }
