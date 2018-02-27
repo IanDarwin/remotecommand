@@ -1,0 +1,4 @@
+= remotecommand: Command Pattern over RMI
+
+Because we want our Command to include Java bytecode, we use RMI rather than a web service.
+Not that we couldn't use a web service at all, but it's just easier with RMI.
