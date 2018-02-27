@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Shut down any previous instances, quietly
+pkill -f 'java -jar target/server'
+
+# Make sure registry is running
+pkill rmiregistry; (cd target/classes; rmiregistry) &
+
+sleep 2
+
+# Now run the thing
+java -jar target/*.jar
