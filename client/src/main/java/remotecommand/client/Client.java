@@ -1,11 +1,11 @@
 package remotecommand.client;
 
-import java.io.*;
-import java.rmi.*;
-import java.rmi.server.*;
-import java.util.Arrays;
+import java.io.IOException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
 
-import remotecommand.*;
+import remotecommand.Command;
+import remotecommand.CommandProcessor;
 
 /**
  *	Main program to run the client.
