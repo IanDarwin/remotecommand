@@ -1,11 +1,11 @@
 package remotecommand.server;
 
-import java.io.*;
-import java.rmi.*;
-import java.rmi.server.*;
-import java.util.concurrent.*;
+import java.io.IOException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 
-import remotecommand.*;
+import remotecommand.Command;
 
 /*
  * Server that accepts client Command objects and runs them.

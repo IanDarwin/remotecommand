@@ -1,14 +1,15 @@
 package remotecommand.server;
 
-import java.io.*;
-import java.rmi.*;
-import java.rmi.server.*;
-import java.util.concurrent.*;
+import java.io.Serializable;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
-import remotecommand.*;
+import remotecommand.Command;
+import remotecommand.CommandProcessor;
 
 /** The work part of the server implementation - called when a client comes along */
 public class CommandProcessorImpl implements CommandProcessor, Serializable {
+	private static final long serialVersionUID = 1L;
 
 	protected static final Executor threadPool = Executors.newSingleThreadExecutor();
 
