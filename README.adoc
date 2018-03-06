@@ -2,3 +2,40 @@
 
 Because we want our Command to include Java bytecode, we use RMI rather than a web service.
 Not that we couldn't use a web service at all, but it's just easier with RMI.
+If you're totally out of the loop on RMI, please check out my free
+https://darwinsys.com/java/rmi[RMI tutorial].
+
+This repo has two separate projects, each configured both for Maven and Eclipse.
+After you've cloned this repo, here's how to get it going.
+Instructions are for *Nix-based systems; for MS-DOS-based systems you'll have
+to do a bit of translation of commands and shell scripts, but it ain't rocket science.
+
+Note that the "common" code is in the server, so the server class files have to be available
+to compile the client. In Maven we install the client code into your personal Maven repository.
+In Eclipse we make the client project depend on the server project.
+
+== HowTo: Maven/Command Line
+
+	cd server; mvn package install // client depends on server code
+	./runserver &		// script looks after running rmiregistry
+	cd ..
+	cd client; mvn package
+	./runclient
+
+== HowTo: Eclipse
+
+Create server project
+
+*	File->New Java Project
+*	Click OFF "Use default location".
+*	Set name to "remotecommand-server" (this name's important as the client project depends on it)
+*	Navigate to git repo, single click on _server_, click Open button.
+*	Click Finish.
+	 
+Create client project
+
+*	File->New Java Project
+*	Click OFF "Use default location".
+*	Set name to "remotecommand-client" (this name's less important but why not keep these two projects together in your projects list)
+*	Navigate to git repo, single click on _client_, click Open button.
+*	Click Finish.
