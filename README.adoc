@@ -5,13 +5,13 @@ Not that we couldn't use a web service at all, but it's just easier with RMI.
 If you're totally out of the loop on RMI, please check out my free
 https://darwinsys.com/java/rmi[RMI tutorial].
 
-This repo has two separate projects, each configured both for Maven and Eclipse.
+This repo has two separate projects, _server_ and _client_, each configured both for Maven and Eclipse.
 After you've cloned this repo, here's how to get it going.
 Instructions are for *Nix-based systems; for MS-DOS-based systems you'll have
 to do a bit of translation of commands and shell scripts, but it ain't rocket science.
 
 Note that the "common" code is in the server, so the server class files have to be available
-to compile the client. In Maven we install the client code into your personal Maven repository.
+to compile the client. Hence, the order you do things in _matters_. In Maven we install the client code into your personal Maven repository.
 In Eclipse we make the client project depend on the server project.
 
 == HowTo: Maven/Command Line
