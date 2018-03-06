@@ -39,3 +39,5 @@ Create client project
 *	Set name to "remotecommand-client" (this name's less important but why not keep these two projects together in your projects list)
 *	Navigate to git repo, single click on _client_, click Open button.
 *	Click Finish.
+
+You can then manually run the RMI registry in another window, run the server's main program, and run the client's main program, and see the interaction.
